@@ -26,7 +26,7 @@ const AddService = () => {
         console.log(serviceDetails);
         if (serviceDetails.imgFile) {
             const imageData = new FormData();
-            imageData.set('key', process.env.REACT_APP_IMAGE_BB_KEY);
+            imageData.set('key', 'b5009156314b835b7542545d197df0e9');
             imageData.append('image', serviceDetails.imgFile);
             axios.post('https://api.imgbb.com/1/upload', imageData)
                 .then((response) => {

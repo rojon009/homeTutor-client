@@ -1,6 +1,6 @@
 
 const firebaseConfig = {
-  apiKey: process.env.REACT_APP_API_KEY,
+  apiKey: "AIzaSyB0F_Enw5K3ssjHByAj-RaSxia7t3x6TTQ",
   authDomain: "fullstack-bookshop.firebaseapp.com",
   projectId: "fullstack-bookshop",
   storageBucket: "fullstack-bookshop.appspot.com",

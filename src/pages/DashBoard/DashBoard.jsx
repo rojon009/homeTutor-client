@@ -12,14 +12,15 @@ const DashBoard = () => {
     useEffect(() => {
         if(loggedInUser?.uid) {
             let orderedBooks = [];
-            axios.get(`http://localhost:5000/bookings/user/${uid}`)
+            axios.get(`https://hometutordb01.herokuapp.com/bookings/user/${uid}`)
                 .then(res => {
                     res.data.forEach(async (order) => {
-                        const singleOrder = await axios.get(`http://localhost:5000/services/${order.bookId}`)
+                        const singleOrder = await axios.get(`https://hometutordb01.herokuapp.com/services/${order.bookId}`)
                         if(singleOrder.data !== '' || null){
                             singleOrder.data.status = order.status;
                             orderedBooks = [...orderedBooks, singleOrder.data];
                             setBooks(orderedBooks)
+                            setLoading(false)
                         }
                     })
                 })

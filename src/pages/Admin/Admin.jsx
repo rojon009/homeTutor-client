@@ -1,9 +1,7 @@
 import React from 'react';
 import { Link, Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
-import AddProduct from '../../components/AddProduct/AddProduct';
 import AddService from '../../components/AddService/AddService';
 import ManageServices from '../../components/ManageServices/ManageServices';
-import ManageProduct from '../../components/MangeProduct/ManageProduct';
 import BookingList from '../../components/BookingList/BookingList'
 import MakeAdmin from '../../components/MakeAdmin/MakeAdmin';
 const Admin = () => {
@@ -28,7 +26,6 @@ const Admin = () => {
                 </Route>
 
                 <Route path={`${path}/manageServices`}>
-                    {/* <ManageProduct /> */}
                     <ManageServices />
                 </Route>
                 <Route path={`${path}/makeAdmin`}>    

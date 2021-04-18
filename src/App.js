@@ -9,7 +9,6 @@ import Admin from "./pages/Admin/Admin";
 import Checkout from "./pages/Checkout/Checkout";
 import Home from "./pages/Home/Home";
 import Login from "./pages/Login/Login";
-import DashBoard from "./pages/DashBoard/DashBoard";
 import axios from "axios";
 import User from "./components/User/User";
 
@@ -23,7 +22,7 @@ const App = () => {
     auth.onAuthStateChanged((user) => {
       if(user){
         setLoggedInUser(user);
-        axios.get('http://localhost:5000/admins')
+        axios.get('https://hometutordb01.herokuapp.com/admins')
         .then(res => res.data.some(el => el.email === user.email))
         .then(res => setAdmin(res))
       }
@@ -48,9 +47,6 @@ const App = () => {
           <PrivetRoute path="/checkout/:id">
             <Checkout />
           </PrivetRoute>
-          {/* <PrivetRoute path="/userDashboard/:uid">
-            <DashBoard />
-          </PrivetRoute> */}
           <PrivetRoute path="/userDashboard">
             <User uid={loggedInUser?.uid} />
           </PrivetRoute>

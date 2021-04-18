@@ -6,14 +6,14 @@ export const Reviews = () => {
 
     const [reviews, setReviews] = useState(null);
     useEffect(() => {
-        axios.get(`http://localhost:5000/reviews`)
+        axios.get(`https://hometutordb01.herokuapp.com/reviews`)
             .then(res => res.data)
             .then(data => { setReviews(data); setLoading(false) })
     }, [])
 
     
         return (
-            <>
+            <section className="pb-5">
                 <h1 className="text-center text-decoration-underline pt-5">User Reviews</h1>
                 <div className="container pt-5">
                     <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 g-4">
@@ -35,7 +35,7 @@ export const Reviews = () => {
                         }
                     </div>
                 </div>
-            </>)
+            </section>)
        
 };
 

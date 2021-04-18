@@ -32,7 +32,7 @@ const AddService = () => {
                 .then((response) => {
                     const imgUrl = response.data.data.display_url;
                     if (imgUrl) {
-                        axios.post(`http://localhost:5000/services/addService`, { name: serviceDetails.name, details: serviceDetails.details, price: serviceDetails.price, imgUrl })
+                        axios.post(`https://hometutordb01.herokuapp.com/services/addService`, { name: serviceDetails.name, details: serviceDetails.details, price: serviceDetails.price, imgUrl })
                             .then(res => {
                                 if(res.data) {
                                     setServiceDetails({

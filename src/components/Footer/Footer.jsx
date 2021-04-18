@@ -86,25 +86,25 @@ const Footer = () => {
                             <h6>LATEST UPDATE</h6>
                             <div className="mt-2 pl-3">
                                 <div className="d-flex align-items-start px-3 my-3">
-                                    <div style={{ minWidth: 40 }} className="px-2 py-1 border d-flex flex-column justify-content-center align-items-center">
+                                    <div style={{ minWidth: 40 }} className="px-2 py-1 me-2 border d-flex flex-column justify-content-center align-items-center">
                                         <span className="fs-xxs">28</span>
                                         <span className="fs-xxs">APR</span>
                                     </div>
-                                    <span className="fs-xs pl-1">New Nike Shoe Arrived. Get it on 20% OFF</span>
+                                    <span className="fs-xs pl-1">New Tuition Arrived</span>
                                 </div>
                                 <div className="d-flex align-items-start px-3 my-3">
-                                    <div style={{ minWidth: 40 }} className="px-2 py-1 border d-flex flex-column justify-content-center align-items-center">
+                                    <div style={{ minWidth: 40 }} className="px-2 py-1 me-2 border d-flex flex-column justify-content-center align-items-center">
                                         <span className="fs-xxs">22</span>
                                         <span className="fs-xxs">MAR</span>
                                     </div>
-                                    <span className="fs-xs pl-1">New Nike Shoe Arrived. Get it on 20% OFF</span>
+                                    <span className="fs-xs pl-1">New Tuition Arrived</span>
                                 </div>
                                 <div className="d-flex align-items-start px-3 my-3">
-                                    <div style={{ minWidth: 40 }} className="px-2 py-1 border d-flex flex-column justify-content-center align-items-center">
+                                    <div style={{ minWidth: 40 }} className="px-2 py-1 me-2 border d-flex flex-column justify-content-center align-items-center">
                                         <span className="fs-xxs">10</span>
                                         <span className="fs-xxs">FEB</span>
                                     </div>
-                                    <span className="fs-xs pl-1">New Nike Shoe Arrived. Get it on 20% OFF</span>
+                                    <span className="fs-xs pl-1">New Tuition Arrived</span>
                                 </div>
                             </div>
                         </div>

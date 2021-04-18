@@ -8,7 +8,7 @@ const SelectStatus = ({status,id}) => {
 
 
     const updateStatus = (e,id) => {
-        axios.patch(`http://localhost:5000/bookings/booking/${id}`,{status: e.target.value})
+        axios.patch(`https://hometutordb01.herokuapp.com/bookings/booking/${id}`,{status: e.target.value})
 
         setBookingStatus(e.target.value)
     }

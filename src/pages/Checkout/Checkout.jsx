@@ -2,7 +2,6 @@ import axios from 'axios';
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router';
 import { UserContext } from '../../App';
-import StripeCheckoutButton from '../../components/stripe-button/stripe-button.componet';
 
 const Checkout = () => {
     const { id } = useParams();
@@ -11,15 +10,16 @@ const Checkout = () => {
     const history = useHistory();
 
     useEffect(() => {
-        axios.get(`http://localhost:5000/services/${id}`)
+        axios.get(`https://hometutordb01.herokuapp.com/services/${id}`)
             .then(res => setOrder(res.data))
     }, [id])
 
     const handleCheckout = () => {
         if(loggedInUser?.uid) {
 
-            axios.post(`http://localhost:5000/bookings/addBooking`,{
+            axios.post(`https://hometutordb01.herokuapp.com/bookings/addBooking`,{
                 userId: loggedInUser?.uid,
+                userEmail: loggedInUser?.email,
                 bookId: id,
                 status: 'pending'
             })
@@ -60,7 +60,6 @@ const Checkout = () => {
             </table>
             <div className="d-flex flex-row-reverse">
             <button onClick={handleCheckout} className="btn btn-success">Checkout</button>
-            {/* <StripeCheckoutButton price={order?.price} /> */}
             </div>
         </div>
     );

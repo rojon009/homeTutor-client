@@ -14,7 +14,7 @@ const MakeAdmin = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        axios.post(`http://localhost:5000/makeAdmin`, {adminEmail})
+        axios.post(`https://hometutordb01.herokuapp.com/makeAdmin`, {adminEmail})
         .then(res => {
             if(res.data) {
                 setAdminEmail('')

@@ -18,7 +18,7 @@ const AddReview = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-                        axios.post(`http://localhost:5000/reviews/addReviews`, { name: reviewDetails.name, msg: reviewDetails.msg, rating: reviewDetails.rating })
+                        axios.post(`https://hometutordb01.herokuapp.com/reviews/addReviews`, { name: reviewDetails.name, msg: reviewDetails.msg, rating: reviewDetails.rating })
                             .then(res => {
                                 if(res.data) {
                                     setReviewDetails({

@@ -12,13 +12,14 @@ const BookingList = () => {
     useEffect(() => {
         if(loggedInUser?.uid) {
             let orderedBooks = [];
-            axios.get(`http://localhost:5000/bookings`)
+            axios.get(`https://hometutordb01.herokuapp.com/bookings`)
                 .then(res => {
                     res.data.forEach(async (order) => {
-                        const singleOrder = await axios.get(`http://localhost:5000/services/${order.bookId}`)
+                        const singleOrder = await axios.get(`https://hometutordb01.herokuapp.com/services/${order.bookId}`)
                         if(singleOrder.data !== '' || null){
                             singleOrder.data.status = order.status;
                             singleOrder.data.orderId = order._id;
+                            singleOrder.data.userEmail = order.userEmail;
                             orderedBooks = [...orderedBooks, singleOrder.data];
                             setBooks(orderedBooks);
                         }
@@ -43,7 +44,8 @@ const BookingList = () => {
                     <thead>
                         <tr>
                             <th scope="col">#</th>
-                            <th scope="col">NAME</th>
+                            <th scope="col">EMAIL</th>
+                            <th scope="col">SERVICE NAME</th>
                             <th scope="col">DETAILS</th>
                             <th scope="col">PRICE</th>
                             <th scope="col">Status</th>
@@ -54,6 +56,7 @@ const BookingList = () => {
                             books?.map((book, index) => (
                                 <tr key={`book?._id${index}`} >
                                     <th scope="row">{index + 1}</th>
+                                    <td>{book?.userEmail}</td>
                                     <td>{book?.name}</td>
                                     <td>{book?.details}</td>
                                     <td>{book?.price}</td>

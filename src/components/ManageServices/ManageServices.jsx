@@ -5,7 +5,7 @@ const ManageServices = () => {
 
     const [services, setServices] = useState(null);
     useEffect(() => {
-        axios.get(`http://localhost:5000/services`)
+        axios.get(`https://hometutordb01.herokuapp.com/services`)
             .then(res => res.data)
             .then(data => {
                 setServices(data)
@@ -13,7 +13,7 @@ const ManageServices = () => {
     }, [])
 
     const deleteServices = (id) => {
-        axios.delete(`http://localhost:5000/services/${id}`)
+        axios.delete(`https://hometutordb01.herokuapp.com/services/${id}`)
         .then(res => {
             if(res.data) {
                 const filteredServices = services.filter(book => book._id !== id);

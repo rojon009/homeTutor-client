@@ -1,6 +1,5 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
-import BookCard from '../BookCard/BookCard';
 import ServiceCard from '../ServiceCard/ServiceCard';
 export const Services = () => {
 

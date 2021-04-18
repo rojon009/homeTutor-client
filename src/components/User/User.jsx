@@ -2,8 +2,6 @@ import React from 'react';
 import { Link, Redirect, Route, Switch, useRouteMatch } from 'react-router-dom';
 import DashBoard from '../../pages/DashBoard/DashBoard';
 import AddReview from '../AddReview/AddReview';
-import BookingList from '../BookingList/BookingList'
-import Reviews from '../Reviews/Reviews';
 const User = ({uid}) => {
 
     let { path, url } = useRouteMatch();

@@ -5,7 +5,7 @@ const OurStory = () => {
         <section className="bg-info pb-5">
         <div className="container">
             <h1 className="text-center text-decoration-underline pt-5">Our Stroy</h1>
-            <div className="row row-cols-2 mt-4">
+            <div className="row row-cols-1 row-cols-md-2 mt-4">
                 <div className="col">
                     <img className="img-fluid" style={{height: '400px'}} src="https://www.crushpixel.com/static18/preview2/young-man-sleeping-with-books-3014877.jpg" alt=""/>
                 </div>

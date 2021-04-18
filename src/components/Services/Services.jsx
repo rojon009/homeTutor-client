@@ -8,7 +8,7 @@ export const Services = () => {
 
     const [services, setServices] = useState(null);
     useEffect(() => {
-        axios.get(`http://localhost:5000/services`)
+        axios.get(`https://hometutordb01.herokuapp.com/services`)
             .then(res => res.data)
             .then(data => { setServices(data); setLoading(false) })
     }, [])
